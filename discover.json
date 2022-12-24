@@ -1,0 +1,134 @@
+[
+  {
+    "backgrounds": [
+      {
+        "url": "./src/api/background/sherlok.jpg"
+      },
+      {
+        "url": "./src/api/background/stranger_things.jpg"
+      }
+    ],
+    "items": [
+      {
+        "type": "tvseries",
+        "title": "Stranger things",
+        "imdb_rate": 9.4,
+        "is_new": true,
+        "country": "USA",
+        "year": 2016,
+        "length": 3240,
+        "num_seasons": 5,
+        "min_age": 16,
+        "genres": ["horror", "sci-fi", "fantasy", "thriller", "drama", "detective"],
+        "poster": "./src/api/poster/stranger_things.jpg",
+        "keyframe": "./src/api/keyframe/stranger_things.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "The Handmaid's Tale",
+        "imdb_rate": 8.1,
+        "country": "USA",
+        "year": 2017,
+        "length": 3600,
+        "num_seasons": 6,
+        "min_age": 18,
+        "genres": ["fantasy", "thriller", "drama"],
+        "poster": "./src/api/poster/handmaids_tale.jpg",
+        "keyframe": "./src/api/keyframe/handmaids_tale.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "Gravity Falls",
+        "imdb_rate": 8.7,
+        "country": "USA",
+        "year": 2012,
+        "length": 1320,
+        "num_seasons": 2,
+        "min_age": 12,
+        "genres": ["cartoon", "comedy", "detective", "adventure", "family", "fantasy"],
+        "poster": "./src/api/poster/gravity_falls.jpg",
+        "keyframe": "./src/api/keyframe/gravity_falls.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "Stranger things",
+        "imdb_rate": 9.4,
+        "is_new": true,
+        "country": "USA",
+        "year": 2016,
+        "length": 3240,
+        "num_seasons": 5,
+        "min_age": 16,
+        "genres": ["horror", "sci-fi", "fantasy", "thriller", "drama", "detective"],
+        "poster": "./src/api/poster/stranger_things.jpg",
+        "keyframe": "./src/api/keyframe/stranger_things.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "The Handmaid's Tale",
+        "imdb_rate": 8.1,
+        "country": "USA",
+        "year": 2017,
+        "length": 3600,
+        "num_seasons": 6,
+        "min_age": 18,
+        "genres": ["fantasy", "thriller", "drama"],
+        "poster": "./src/api/poster/handmaids_tale.jpg",
+        "keyframe": "./src/api/keyframe/handmaids_tale.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "Gravity Falls",
+        "imdb_rate": 8.7,
+        "country": "USA",
+        "year": 2012,
+        "length": 1320,
+        "num_seasons": 2,
+        "min_age": 12,
+        "genres": ["cartoon", "comedy", "detective", "adventure", "family", "fantasy"],
+        "poster": "./src/api/poster/gravity_falls.jpg",
+        "keyframe": "./src/api/keyframe/gravity_falls.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "Stranger things",
+        "imdb_rate": 9.4,
+        "is_new": true,
+        "country": "USA",
+        "year": 2016,
+        "length": 3240,
+        "num_seasons": 5,
+        "min_age": 16,
+        "genres": ["horror", "sci-fi", "fantasy", "thriller", "drama", "detective"],
+        "poster": "./src/api/poster/stranger_things.jpg",
+        "keyframe": "./src/api/keyframe/stranger_things.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "The Handmaid's Tale",
+        "imdb_rate": 8.1,
+        "country": "USA",
+        "year": 2017,
+        "length": 3600,
+        "num_seasons": 6,
+        "min_age": 18,
+        "genres": ["fantasy", "thriller", "drama"],
+        "poster": "./src/api/poster/handmaids_tale.jpg",
+        "keyframe": "./src/api/keyframe/handmaids_tale.jpg"
+      },
+      {
+        "type": "tvseries",
+        "title": "Gravity Falls",
+        "imdb_rate": 8.7,
+        "country": "USA",
+        "year": 2012,
+        "length": 1320,
+        "num_seasons": 2,
+        "min_age": 12,
+        "genres": ["cartoon", "comedy", "detective", "adventure", "family", "fantasy"],
+        "poster": "./src/api/poster/gravity_falls.jpg",
+        "keyframe": "./src/api/keyframe/gravity_falls.jpg"
+      }
+    ]
+  }
+]
