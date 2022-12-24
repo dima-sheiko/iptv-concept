@@ -1,8 +1,8 @@
-interface URL {
+export interface IURL {
   url: string;
 }
 
-interface Item {
+export interface Item {
   type: string;
   title: string;
   imdb_rate: number;
@@ -18,6 +18,6 @@ interface Item {
 }
 
 export interface IData {
-  backgrounds: URL[];
+  backgrounds: IURL[];
   items: Item[];
 }
