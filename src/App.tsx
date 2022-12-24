@@ -3,12 +3,14 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { useState, useEffect } from 'react';
+import { Background } from './components/Background/Background';
 import { IData } from './types/IData';
 import axios from 'axios';
 import './styles/styles.css';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
+  const backgrounds = data.flatMap(elem => elem.backgrounds.map(value => value.url));
 
   // API call imitation
   useEffect(() => {
@@ -24,5 +26,10 @@ export const App = () => {
     getData();
   }, []);
 
-  return <div>App</div>;
+  return (
+    <>
+      <Background backgrounds={backgrounds} />
+      <div className='container'></div>
+    </>
+  );
 };
