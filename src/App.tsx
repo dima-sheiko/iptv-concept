@@ -14,7 +14,9 @@ export const App = () => {
   const [data, setData] = useState<IData[]>([]);
   const [query, setQuery] = useState('');
 
-  const backgrounds = data.flatMap(elem => elem.backgrounds.map(value => value.url));
+  const backgrounds = data.flatMap(item => item.backgrounds.map(value => value.url));
+  const items = data.flatMap(item => item.items.map(value => value));
+  const content = items.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
 
   // API call imitation
   useEffect(() => {
@@ -30,16 +32,13 @@ export const App = () => {
     getData();
   }, []);
 
-  const getQuery = (query: string) => {
-    setQuery(query);
-  };
-
   return (
     <>
       <Background backgrounds={backgrounds} />
       <div className='container'>
         <Header />
-        <Search getQuery={getQuery} />
+        <Search setQuery={setQuery} />
+        {/* <h3>{!query ? 'In spotlight' : content.length === 0 ? '' : `TV Shows (${content.length})`}</h3> */}
       </div>
     </>
   );
