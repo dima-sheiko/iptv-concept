@@ -42,7 +42,13 @@ export const App = () => {
       <div className='container'>
         <Header />
         <Search setQuery={setQuery} />
-        {/* <h3>{!query ? 'In spotlight' : content.length === 0 ? '' : `TV Shows (${content.length})`}</h3> */}
+        {!query ? (
+          <h3 className='spotlight'>In the spotlight</h3>
+        ) : content.length === 0 ? (
+          ''
+        ) : (
+          <h3 className='all'>{`TV Shows (${content.length})`}</h3>
+        )}
         <CardContainer content={content} />
       </div>
     </>
