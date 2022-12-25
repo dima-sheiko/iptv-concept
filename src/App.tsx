@@ -5,11 +5,11 @@ import '@fontsource/roboto/700.css';
 import { useState, useEffect, useMemo } from 'react';
 import { Background } from './components/Background/Background';
 import { IData } from './types/IData';
-import axios from 'axios';
-import './styles/styles.css';
 import { Header } from './components/Header/Header';
 import { Search } from './components/Search/Search';
 import { CardContainer } from './components/CardContainer/CardContainer';
+import axios from 'axios';
+import './styles/styles.css';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
