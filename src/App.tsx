@@ -8,6 +8,7 @@ import { IData } from './types/IData';
 import axios from 'axios';
 import './styles/styles.css';
 import { Header } from './components/Header/Header';
+import { Search } from './components/Search/Search';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
@@ -38,6 +39,7 @@ export const App = () => {
       <Background backgrounds={backgrounds} />
       <div className='container'>
         <Header />
+        <Search getQuery={getQuery} />
       </div>
     </>
   );
