@@ -14,7 +14,9 @@
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
     "@react-spring/web": "^9.6.1",
+    "@types/lodash.debounce": "^4.0.7",
     "axios": "^1.2.1",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^8.4.5"
