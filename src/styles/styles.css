@@ -17,3 +17,17 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.spotlight {
+  margin-top: 56px;
+  font-size: 2rem;
+  color: #ffff;
+  text-align: center;
+}
+
+.all {
+  margin-top: 56px;
+  margin-left: 72px;
+  font-size: 2rem;
+  color: #ffff;
+}
