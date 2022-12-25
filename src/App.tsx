@@ -7,6 +7,7 @@ import { Background } from './components/Background/Background';
 import { IData } from './types/IData';
 import axios from 'axios';
 import './styles/styles.css';
+import { Header } from './components/Header/Header';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
@@ -29,7 +30,9 @@ export const App = () => {
   return (
     <>
       <Background backgrounds={backgrounds} />
-      <div className='container'></div>
+      <div className='container'>
+        <Header />
+      </div>
     </>
   );
 };
