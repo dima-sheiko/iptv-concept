@@ -11,6 +11,8 @@ import { Header } from './components/Header/Header';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
+  const [query, setQuery] = useState('');
+
   const backgrounds = data.flatMap(elem => elem.backgrounds.map(value => value.url));
 
   // API call imitation
@@ -26,6 +28,10 @@ export const App = () => {
 
     getData();
   }, []);
+
+  const getQuery = (query: string) => {
+    setQuery(query);
+  };
 
   return (
     <>
