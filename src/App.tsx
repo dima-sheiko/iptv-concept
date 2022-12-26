@@ -10,6 +10,7 @@ import { Search } from './components/Search/Search';
 import { CardContainer } from './components/CardContainer/CardContainer';
 import axios from 'axios';
 import './styles/styles.css';
+import { Divider } from './components/Divider/Divider';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
@@ -27,7 +28,7 @@ export const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('../discover.jso');
+        const response = await axios.get('../discover.json');
         setData(response.data);
       } catch (error) {
         if (axios.isAxiosError(error)) {
@@ -47,14 +48,8 @@ export const App = () => {
       <div className='container'>
         <Header />
         <Search setQuery={setQuery} />
-        {!query ? (
-          <h3 className='spotlight'>In the spotlight</h3>
-        ) : content.length === 0 ? (
-          ''
-        ) : (
-          <h3 className='all'>{`TV Shows (${content.length})`}</h3>
-        )}
-        <CardContainer content={content} error={error}/>
+        <Divider query={query} content={content.length} />
+        <CardContainer content={content} error={error} />
       </div>
     </>
   );
