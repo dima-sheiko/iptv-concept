@@ -14,7 +14,7 @@ export const CardContainer = ({ content, error }: CardContainerProps) => {
   return (
     <>
       {error && alert(error)}
-      {/* TS interface errors in development mode is a known Swiper bug with React 18 */}
+      {/* Ошибки interface в dev режиме - баг с React 18, который пока не починили. Можно убрать с @ts-nocheck */}
       <Swiper slidesPerView={4}>
         {content.map(item => (
           <SwiperSlide key={nanoid()}>
