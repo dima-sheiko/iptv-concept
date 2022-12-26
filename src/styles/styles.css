@@ -18,16 +18,3 @@ body {
   height: 100vh;
   padding: 0 72px;
 }
-
-.spotlight {
-  margin-top: 56px;
-  font-size: 2rem;
-  color: #ffff;
-  text-align: center;
-}
-
-.all {
-  margin-top: 56px;
-  font-size: 2rem;
-  color: #ffff;
-}
