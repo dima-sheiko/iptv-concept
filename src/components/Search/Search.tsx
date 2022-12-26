@@ -29,7 +29,6 @@ export const Search = ({ setQuery }: SearchProps) => {
   const onClearSearch = () => {
     setValue('');
     debounceSearch('');
-    console.log('clear')
   };
 
   return (
