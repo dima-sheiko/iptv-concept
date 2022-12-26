@@ -21,14 +21,11 @@ export const Background = ({ backgrounds }: BackgroundProps) => {
   }, [currentIndex]);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.line}></div>
-      <div
-        className={styles.bg}
-        style={{
-          backgroundImage: `url(${backgrounds[currentIndex]})`,
-        }}
-      ></div>
-    </div>
+    <div
+      className={styles.bg}
+      style={{
+        backgroundImage: `url(${backgrounds[currentIndex]})`,
+      }}
+    ></div>
   );
 };
