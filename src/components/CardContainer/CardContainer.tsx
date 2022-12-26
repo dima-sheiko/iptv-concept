@@ -1,6 +1,9 @@
 import { Item } from '../../types/IData';
 import { Card } from '../Card/Card';
-import styles from './CardContainer.module.css';
+import { nanoid } from 'nanoid';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import './styles.css';
 
 interface CardContainerProps {
   content: Item[];
@@ -8,10 +11,13 @@ interface CardContainerProps {
 
 export const CardContainer = ({ content }: CardContainerProps) => {
   return (
-    <div>
+    // TS interface errors in development mode is a known Swiper bug
+    <Swiper slidesPerView={4}>
       {content.map(item => (
-        <Card item={item} />
+        <SwiperSlide key={nanoid()}>
+          <Card item={item} />
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   );
 };
