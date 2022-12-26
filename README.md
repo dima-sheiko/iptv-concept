@@ -14,5 +14,4 @@ Building the app for production to the build folder.
 ```bash
 npm run build
 ```
-***
-👉 [Live Demo]()
+
