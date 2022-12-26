@@ -13,6 +13,7 @@ import './styles/styles.css';
 
 export const App = () => {
   const [data, setData] = useState<IData[]>([]);
+  const [error, setError] = useState('');
   const [query, setQuery] = useState('');
 
   const backgrounds = useMemo(() => data.flatMap(item => item.backgrounds.map(value => value.url)), [data]);
@@ -26,10 +27,14 @@ export const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('../discover.json');
+        const response = await axios.get('../discover.jso');
         setData(response.data);
       } catch (error) {
-        console.log(error);
+        if (axios.isAxiosError(error)) {
+          setError(`Error: ${error.message}`);
+        } else {
+          setError(`An unexpected error occurred`);
+        }
       }
     };
 
@@ -49,7 +54,7 @@ export const App = () => {
         ) : (
           <h3 className='all'>{`TV Shows (${content.length})`}</h3>
         )}
-        <CardContainer content={content} />
+        <CardContainer content={content} error={error}/>
       </div>
     </>
   );
