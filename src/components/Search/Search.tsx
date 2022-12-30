@@ -16,7 +16,6 @@ export const Search = ({ setQuery }: SearchProps) => {
     []
   );
 
-
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     debounceSearch(value);
@@ -36,7 +35,7 @@ export const Search = ({ setQuery }: SearchProps) => {
       <div className={styles.wrapper}>
         <div className={styles.search_box}>
           <input
-            className={styles.search}
+            className={`${styles.search} ${value ? styles.filled : ''}`}
             value={value}
             onChange={onChangeInput}
             type='text'

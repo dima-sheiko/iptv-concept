@@ -30,8 +30,11 @@
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.563rem;
-  cursor: pointer;
   transition: 0.5s;
+}
+
+.filled {
+  background: rgb(255, 255, 255);
 }
 
 .clear {
