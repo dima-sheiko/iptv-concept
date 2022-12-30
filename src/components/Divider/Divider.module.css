@@ -1,4 +1,6 @@
 .spotlight {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
   margin-top: 56px;
   font-size: 2rem;
   color: #ffff;
@@ -6,6 +8,8 @@
 }
 
 .all {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
   margin-top: 56px;
   margin-bottom: -30px;
   font-size: 2rem;

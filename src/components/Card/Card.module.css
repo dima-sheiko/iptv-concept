@@ -67,6 +67,7 @@
 }
 
 .title {
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.75rem;

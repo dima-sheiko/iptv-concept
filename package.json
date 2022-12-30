@@ -13,7 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/roboto": "^4.5.8",
+    "@fontsource/source-sans-pro": "^4.5.11",
+    "@fontsource/ubuntu": "^4.5.11",
     "@types/lodash.debounce": "^4.0.7",
     "axios": "^1.2.1",
     "lodash.debounce": "^4.0.8",

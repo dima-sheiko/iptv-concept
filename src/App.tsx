@@ -1,7 +1,5 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource/ubuntu/'
+import '@fontsource/source-sans-pro';
 import { useState, useEffect, useMemo } from 'react';
 import { Background } from './components/Background/Background';
 import { IData } from './types/IData';
