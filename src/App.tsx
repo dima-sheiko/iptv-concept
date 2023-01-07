@@ -1,4 +1,4 @@
-import '@fontsource/ubuntu/'
+import '@fontsource/ubuntu/';
 import '@fontsource/source-sans-pro';
 import { useState, useEffect, useMemo } from 'react';
 import { Background } from './components/Background/Background';
@@ -6,8 +6,9 @@ import { IData } from './types/IData';
 import { Header } from './components/Header/Header';
 import { Search } from './components/Search/Search';
 import { CardContainer } from './components/CardContainer/CardContainer';
-import axios from 'axios';
 import { Divider } from './components/Divider/Divider';
+import { ActionsEnum, HttpHandler } from './utils/HttpHandler';
+import axios from 'axios';
 import './styles/styles.css';
 
 export const App = () => {
@@ -26,8 +27,8 @@ export const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('../discover.json');
-        setData(response.data);
+        const response = await HttpHandler.get(ActionsEnum.GET_DISCOVER);
+        setData(response);
       } catch (error) {
         if (axios.isAxiosError(error)) {
           setError(`Error: ${error.message}`);
