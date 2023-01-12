@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Item } from '../../types/IData';
+import { Item } from '../../types/types';
 import styles from './Card.module.css';
 
 interface CardProps {
