@@ -1,4 +1,4 @@
-import { Item } from '../../types/IData';
+import { Item } from '../../types/types';
 import { Card } from '../Card/Card';
 import { nanoid } from 'nanoid';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,7 +14,6 @@ export const CardContainer = ({ content, error }: CardContainerProps) => {
   return (
     <>
       {error && alert(error)}
-      {/* Ошибки interface в dev режиме - баг с React 18, который пока не починили. Можно убрать с @ts-nocheck */}
       <Swiper slidesPerView={4}>
         {content.map(item => (
           <SwiperSlide key={nanoid()}>
