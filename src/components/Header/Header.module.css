@@ -10,11 +10,6 @@
   backdrop-filter: blur(12.5px);
 }
 
-.logo {
-  width: 113px;
-  height: 32px;
-}
-
 .menu {
   display: flex;
 }
