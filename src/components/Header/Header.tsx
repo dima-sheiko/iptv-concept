@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div>
-        <img className={styles.logo} src={logo} alt='site logo' />
+        <img src={logo} alt='site logo' />
       </div>
       <nav className={styles.menu}>
         {menu.map(item => (
