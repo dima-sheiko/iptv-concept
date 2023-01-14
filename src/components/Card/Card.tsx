@@ -23,8 +23,9 @@ export const Card = ({ item }: CardProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.head} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {isHovering && <img className={styles.image_hovered} src={keyframe} alt='movie poster' />}
-        {!isHovering && (
+        {isHovering ? (
+          <img className={styles.image_hovered} src={keyframe} alt='movie poster' />
+        ) : (
           <>
             <img className={styles.image} src={poster} alt='movie poster' />{' '}
             <div className={styles.labels}>
