@@ -7,28 +7,34 @@ interface BackgroundProps {
 }
 
 export const Background = ({ backgrounds }: BackgroundProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeImage, setActiveImage] = useState(0);
 
-  const background = useMemo(() => backgrounds.map(item => item.url), [backgrounds]);
+  const images = useMemo(() => backgrounds.map(item => item.url), [backgrounds]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (currentIndex === background.length - 1) {
-        setCurrentIndex(0);
-      } else {
-        setCurrentIndex(currentIndex + 1);
-      }
-    }, 5000);
+    let intervalId: NodeJS.Timeout;
+
+    if (images.length > 0) {
+      intervalId = setInterval(() => {
+        setActiveImage((activeImage + 1) % images.length);
+      }, 5000);
+    }
 
     return () => clearInterval(intervalId);
-  }, [currentIndex]);
+  }, [activeImage, images]);
 
   return (
-    <div
-      className={styles.bg}
-      style={{
-        backgroundImage: `url(${background[currentIndex]})`,
-      }}
-    />
+    <>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`
+                    ${styles.backgroundItem}
+                    ${activeImage === index ? styles.active : ''}
+                 `}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
+    </>
   );
 };
