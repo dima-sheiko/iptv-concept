@@ -6,7 +6,8 @@
   bottom: 0;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease-in-out;
+  filter: brightness(40%);
+  transition: opacity 1.5s ease-in-out;
   opacity: 0;
 }
 
