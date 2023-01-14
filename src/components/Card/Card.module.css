@@ -4,8 +4,6 @@
   align-items: flex-start;
   padding: 0px;
   gap: 16px;
-  width: 368px;
-  height: 335px;
 }
 
 .head {
@@ -56,6 +54,7 @@
   width: 100%;
   border-radius: 4px;
   filter: brightness(70%);
+  pointer-events: none;
 }
 
 .info {
