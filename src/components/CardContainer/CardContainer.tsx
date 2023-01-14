@@ -3,6 +3,7 @@ import { Card } from '../Card/Card';
 import { nanoid } from 'nanoid';
 import Carousel from 'nuka-carousel';
 import styles from './CardContainer.module.css';
+import './SliderStyles.css'
 
 interface CardContainerProps {
   content: Item[];
