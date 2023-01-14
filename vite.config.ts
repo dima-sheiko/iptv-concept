@@ -12,7 +12,7 @@ export default defineConfig({
       targets: [
         {
           src: './api',
-          dest: 'dist/api',
+          dest: 'dist',
         },
       ],
       hook: 'writeBundle',
