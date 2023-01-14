@@ -13,9 +13,11 @@ body {
   font-weight: 400;
 }
 
+#root {
+  position: relative;
+}
+
 .container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding: 0 72px;
+  min-height: 100vh;
 }
