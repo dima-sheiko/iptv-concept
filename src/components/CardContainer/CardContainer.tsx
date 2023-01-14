@@ -1,8 +1,8 @@
 import { Item } from '../../types/types';
 import { Card } from '../Card/Card';
 import { nanoid } from 'nanoid';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import Carousel from 'nuka-carousel';
+import styles from './CardContainer.module.css';
 import './styles.css';
 
 interface CardContainerProps {
@@ -11,16 +11,17 @@ interface CardContainerProps {
 }
 
 export const CardContainer = ({ content, error }: CardContainerProps) => {
+  if (error) {
+    alert(error);
+  }
+
   return (
-    <>
-      {error && alert(error)}
-      <Swiper slidesPerView={4}>
+    <div className={styles.container}>
+      <Carousel className='MainSlider' slidesToShow={5} cellSpacing={16} withoutControls enableKeyboardControls>
         {content.map(item => (
-          <SwiperSlide key={nanoid()}>
-            <Card item={item} />
-          </SwiperSlide>
+          <Card key={nanoid()} item={item} />
         ))}
-      </Swiper>
-    </>
+      </Carousel>
+    </div>
   );
 };
