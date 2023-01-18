@@ -1,4 +1,6 @@
-# NetUP Task
+# IPTV Concept
+
+Small concept for IPTV streaming service with dynamic background and slider.
 
 Installing all the necessary dependencies.
 ```bash
