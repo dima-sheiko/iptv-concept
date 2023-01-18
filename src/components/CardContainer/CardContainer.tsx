@@ -1,10 +1,8 @@
 import { Item } from '../../types/types';
 import { Card } from '../Card/Card';
-import { nanoid } from 'nanoid';
 import Carousel from 'nuka-carousel';
 import styles from './CardContainer.module.css';
 import './SliderStyles.css';
-import { useMemo } from 'react';
 
 interface CardContainerProps {
   content: Item[];
@@ -12,7 +10,7 @@ interface CardContainerProps {
 }
 
 export const CardContainer = ({ content, error }: CardContainerProps) => {
-  const sliderKey = useMemo(() => content.length, [content]);
+  const sliderKey = () => content.length;
 
   if (error) {
     alert(error);
@@ -28,8 +26,8 @@ export const CardContainer = ({ content, error }: CardContainerProps) => {
         withoutControls
         enableKeyboardControls
       >
-        {content.map(item => (
-          <Card key={nanoid()} item={item} />
+        {content.map((item, index) => (
+          <Card key={index} item={item} />
         ))}
       </Carousel>
     </div>
