@@ -1,6 +1,8 @@
 # IPTV Concept
 
-Small concept for IPTV streaming service with dynamic background and slider.
+Small concept for IPTV streaming service with dynamic background and slider. Built with React and TypeScript. 
+
+TODO: mobile version
 
 Installing all the necessary dependencies.
 ```bash
